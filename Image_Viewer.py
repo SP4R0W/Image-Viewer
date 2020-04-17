@@ -15,6 +15,7 @@ from PIL import ImageTk,Image
 
 root = Tk()
 root.title("Image Viewer")
+root.iconbitmap('icon.ico')
 
 #====================================
 #VARIABLES
@@ -23,7 +24,8 @@ root.title("Image Viewer")
 imageList = []
 
 #There will be always an image on start. Don't delete it or it may cause some glitches.
-img = Image.open("E:/Programming/Python/Image Viewer/80634973_799569047183160_6484811261547642880_n.jpg")
+path = os.getcwd()
+img = Image.open(path+"/test.jpg")
 ph = ImageTk.PhotoImage(img)
 
 #Add that image to the main list for images.

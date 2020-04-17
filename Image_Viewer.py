@@ -186,12 +186,15 @@ def GUI():
 
     ivMenu = Menu(root)
 
+    ivMenuFile = Menu(ivMenu,tearoff=0)
     ivMenuInfo = Menu(ivMenu,tearoff=0)
 
+    ivMenu.add_cascade(label="File",menu=ivMenuFile)
     ivMenu.add_cascade(label="Info",menu=ivMenuInfo)
 
     ivMenuInfo.add_command(label="Help",command=helpMenu)
     ivMenuInfo.add_command(label="About",command=aboutMenu)
+    ivMenuFile.add_command(label="Del",command=delImage)
 
     root.config(menu=ivMenu)
 
